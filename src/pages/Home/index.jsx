@@ -2,8 +2,11 @@ import styles from './home.module.css'
 import { Header } from '../../components/header'
 import { Link } from 'react-router-dom'
 
-export function Home() {
+import { useSelector } from 'react-redux'
 
+
+export function Home() {
+  const {user} = useSelector((rootReducer) => rootReducer.user)
   function handleDeleteAddress(){
     alert("Endereço deletado com sucesso!")
   }
